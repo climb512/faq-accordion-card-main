@@ -2,10 +2,6 @@
 
 ![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
 
-### Screenshot
-
-
-
 ### Built with
 
 - Semantic HTML5 markup
