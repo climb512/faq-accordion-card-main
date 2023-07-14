@@ -1,6 +1,6 @@
 # Frontend Mentor - Social proof section
 
-![Design preview for the FAQ accordion card coding challenge](./design/desktop-preview.jpg)
+![Screenshot](./Frontend-Mentor-FAQ-Accordion-Card.png)
 
 ### Built with
 
