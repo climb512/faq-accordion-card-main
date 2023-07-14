@@ -1,0 +1,207 @@
+:root {
+    --clr-dark-blue: hsl(238, 29%, 16%);
+    --clr-soft-red: hsl(14, 88%, 65%);
+
+    --clr-soft-violet: hsl(273, 75%, 66%);
+    --clr-soft-blue: hsl(240, 73%, 65%);
+    --clr-box-shadow: hsl(261, 49%, 44%);
+    --clr-container-shadow: hsl(258, 73%, 45%);
+
+    --clr-text-blue: hsl(237, 12%, 33%);
+    --clr-text-grey-blue: hsl(240, 6%, 50%);
+
+    --clr-hr-grey-blue: hsl(240, 5%, 91%);
+
+    --fs-text: .75rem;
+    --ff-kumb-sans: 'Kumbh Sans', sans-serif;
+    --fw-reg: 400;
+    --fw-bold: 700;
+}
+
+body {
+    background: linear-gradient(var(--clr-soft-violet), var(--clr-soft-blue));
+    background-repeat: no-repeat;
+}
+
+.background {
+    display: grid;
+}
+
+.img-box {
+    display: none;
+}
+
+.container {
+    background-color: white;
+    margin: 200px 2rem 0 2rem;
+    border-radius: 30px;
+    position: relative;
+}
+
+.central-display {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--ff-kumb-sans);
+    color: var(--clr-text-blue);
+}
+
+.faq-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-content: flex-start;
+    background-image: url(../images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 330px;
+    background-position: top center;
+    padding: 10rem 2rem 5rem 2rem;
+}
+
+.hero {
+    max-width: 330px;
+    position: absolute;
+    top: -150px;
+    left: calc(50% - 165px);
+}
+
+.hero-mobile {
+    display: block;
+}
+
+.hero-desktop {
+    display: none;
+}
+
+.title {
+    align-self: center;
+    font-size: 2.5rem;
+    font-weight: var(--fw-bold);
+}
+
+.answered-question {
+    font-size: var(--fs-text);
+    display: grid;
+    justify-content: space-between;
+    align-items: end;
+    gap: 0.8rem;
+}
+
+.faq-question {
+    font-weight: var(--fw-bold);
+}
+
+.faq-question:hover {
+    color: var(--clr-soft-red);
+}
+
+.arrow {
+    grid-column: 2 / 3;
+    align-self: end;
+}
+
+.faq-answer {
+    color: var(--clr-text-grey-blue);
+    display: none;
+
+}
+
+.faq-separator {
+    color: var(--clr-hr-grey-blue);
+}
+
+.up {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 442px) {
+    .answered-question {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .background {
+        justify-content: space-around;
+        grid-template-columns: minmax(756px, 1000px);
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    .box-container {
+        position: absolute;
+        top: 320px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .img-box {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 20%;
+        transform: translate(-18%, -28%);
+        z-index: 2;
+        filter: drop-shadow(-1px 15px 15px var(--clr-box-shadow));
+    }
+
+    .container {
+        margin-top: 128px;
+        margin-bottom: 128px;
+        margin-right: 3rem;
+        margin-left: 4rem;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-image: url(../images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-position: -604px 70%;
+        filter: drop-shadow(0 15px 15px var(--clr-container-shadow));
+    }
+
+    .hero-mobile {
+        display: none;
+    }
+
+    .hero-desktop {
+        display: block;
+    }
+
+    .hero {
+        max-width: 432px;
+        left: -70px;
+        top: calc(50% - 165px);
+        z-index: 1;
+    }
+
+    .faq-container {
+        background-image: none;
+        background-size: 0;
+        background-position: top center;
+        padding: 3rem 2rem 3rem 2rem;
+    }
+
+    .title {
+        align-self: start;
+    }
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+.attribution a {
+    color: var(--clr-hr-grey-blue);
+}

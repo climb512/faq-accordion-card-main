@@ -10,11 +10,12 @@
 
 - Semantic HTML5 markup
 - Flexbox
-- JS form handling
+- CSS Grid
+- simple JS
 
 ### What I learned
 
-
+ There were several positioning puzzles to solve with this one.  Very subtle requirements like overflow: hidden; on the main container while allowing a floating box image above (which needed filter: drop-shadow rather than box-shadow).
 
 ## Author
 
